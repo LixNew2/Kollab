@@ -6,7 +6,7 @@
   **The "GitHub of music" — a music collaboration platform for DAWs.**
 
   Desktop client built with [Godot Engine 4.3](https://godotengine.org/) · Version `2.3.0`
-  Published by **Kollab sound** · [kollabsound.com](https://kollabsound.com)
+  Published by **Kollab sound**
 </div>
 
 ---
