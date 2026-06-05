@@ -1,0 +1,23 @@
+base_account_data = {
+    "pseudo":"",
+    "account_infos":{"activated":0,
+                "free_trial_start_time" : 0,
+                "unique_id":"null",
+                "hostname":"null",
+                "type":0,
+                "key_infos":{"key":"null",
+                             "timestamp":0,},
+                "nbr_project":0,
+                "account_icon":{"normal":"null",
+                                "pressed":"null"}},
+                "social":{"instagram_url":"null",
+                          "discord_url":"null",
+                          "soundcloud_url":"null",
+                          "spotify_url":"null",
+                          "tiktok_url":"null",
+                          "twitch_url":"null",
+                          "user_desc":"null",
+                          "x_url":"null",
+                          "youtube_url":"null",},
+    "projects":{"null":"null"}
+}

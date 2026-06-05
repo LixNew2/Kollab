@@ -1,0 +1,570 @@
+[gd_scene load_steps=37 format=3 uid="uid://cnqmjodqdilgf"]
+
+[ext_resource type="Script" path="res://scripts/home.gd" id="2_kduuy"]
+[ext_resource type="Texture2D" uid="uid://7p023uoq7vfe" path="res://assets/ressources/logout_icon.png" id="4_yjndx"]
+[ext_resource type="ButtonGroup" uid="uid://d0hea0qcpvwn8" path="res://groups/side_btn.tres" id="5_avu2u"]
+[ext_resource type="FontFile" uid="uid://digpvcpm40o5d" path="res://assets/themes/fonts/Inter-Medium.ttf" id="6_0kqtp"]
+[ext_resource type="Texture2D" uid="uid://bo83p85asfx12" path="res://assets/ressources/full_logo_white_RGB.png" id="6_2w1nw"]
+[ext_resource type="PackedScene" uid="uid://k1q3vbdu4ec8" path="res://scenes/projects/projects.tscn" id="7_kf4kx"]
+[ext_resource type="Texture2D" uid="uid://bkt6nccun88o1" path="res://assets/ressources/full_logo_white_RGB_hover.png" id="7_ytskd"]
+[ext_resource type="FontFile" uid="uid://byaols5h1jgiw" path="res://assets/themes/fonts/Inter-Regular.ttf" id="8_1t3ni"]
+[ext_resource type="ButtonGroup" uid="uid://b63oauwpixwhp" path="res://groups/button/home_shortcut_btn.tres" id="8_fw1xa"]
+[ext_resource type="PackedScene" uid="uid://d3ilc2tmi0akm" path="res://scenes/settings.tscn" id="8_gptkw"]
+[ext_resource type="PackedScene" uid="uid://u14m4wih8to1" path="res://scenes/public_projects.tscn" id="10_yqhtn"]
+[ext_resource type="PackedScene" uid="uid://2ns3l83ig35v" path="res://scenes/projects/social.tscn" id="12_1jcl6"]
+[ext_resource type="PackedScene" uid="uid://b8rlkg5g8xynd" path="res://scenes/projects/user_profile.tscn" id="13_l6r3i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0xfc"]
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0eljp"]
+shadow_color = Color(0, 0, 0, 0.560784)
+shadow_size = 300
+
+[sub_resource type="Theme" id="Theme_ultf2"]
+/styles/fgh = SubResource("StyleBoxFlat_u0xfc")
+VBoxContainer/styles/shadow = SubResource("StyleBoxFlat_0eljp")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nq8b3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0dpw"]
+bg_color = Color(0.270588, 0.27451, 0.301961, 0)
+draw_center = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1uvw"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+draw_center = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_puhnk"]
+bg_color = Color(0.0705882, 0.0705882, 0.0784314, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmrsc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7fxjq"]
+bg_color = Color(0.270588, 0.27451, 0.301961, 1)
+draw_center = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wb288"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ih0ti"]
+bg_color = Color(0.0705882, 0.0705882, 0.0784314, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15tqv"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22ww7"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2xcj"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hfyf"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6w1gc"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78ibq"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ufr3p"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wdoci"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1gpb"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cw3v7"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_paqhy"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_orfyu"]
+draw_center = false
+
+[node name="home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_kduuy")
+metadata/_edit_vertical_guides_ = [1595.0]
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.254902, 0.254902, 0.262745, 1)
+
+[node name="container" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ultf2")
+theme_override_constants/separation = 1
+
+[node name="container" type="HBoxContainer" parent="container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="side_bar" type="ColorRect" parent="container/container"]
+custom_minimum_size = Vector2(200, 180)
+layout_mode = 2
+size_flags_horizontal = 0
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="container/container/side_bar"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 15.0
+offset_right = 191.0
+offset_bottom = 80.0
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureButton" parent="container/container/side_bar/HBoxContainer"]
+custom_minimum_size = Vector2(50, 65)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="container/container/side_bar/HBoxContainer/TextureRect"]
+layout_mode = 2
+offset_left = 54.0
+offset_top = 35.0
+offset_right = 113.0
+offset_bottom = 56.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 12
+
+[node name="Label" type="Label" parent="container/container/side_bar/HBoxContainer/TextureRect"]
+layout_mode = 2
+offset_left = 54.0
+offset_top = 17.0
+offset_right = 127.0
+offset_bottom = 38.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 14
+
+[node name="logout_container" type="HBoxContainer" parent="container/container/side_bar/HBoxContainer/TextureRect"]
+visible = false
+layout_mode = 2
+offset_left = 53.0
+offset_top = 25.0
+offset_right = 145.0
+offset_bottom = 43.0
+size_flags_vertical = 4
+theme_override_constants/separation = 5
+
+[node name="icon" type="TextureRect" parent="container/container/side_bar/HBoxContainer/TextureRect/logout_container"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+texture = ExtResource("4_yjndx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="logout_btn" type="Button" parent="container/container/side_bar/HBoxContainer/TextureRect/logout_container"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_nq8b3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g0dpw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v1uvw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_puhnk")
+text = "logout_btn"
+alignment = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="container/container/side_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 108.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="home_btn" type="Button" parent="container/container/side_bar/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_lmrsc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7fxjq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wb288")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih0ti")
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("5_avu2u")
+text = "home_btn"
+alignment = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="container/container/side_bar/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="container/container/side_bar/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="container/container/side_bar/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="my_project_btn" type="Button" parent="container/container/side_bar/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxFlat_15tqv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_22ww7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s2xcj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6hfyf")
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("8_fw1xa")
+text = "my_project_btn"
+alignment = 0
+
+[node name="create_btn" type="Button" parent="container/container/side_bar/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxFlat_15tqv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_22ww7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s2xcj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6hfyf")
+toggle_mode = true
+button_group = ExtResource("8_fw1xa")
+text = "create_btn"
+alignment = 0
+
+[node name="join_btn" type="Button" parent="container/container/side_bar/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxFlat_15tqv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_22ww7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s2xcj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6hfyf")
+toggle_mode = true
+button_group = ExtResource("8_fw1xa")
+text = "join_btn"
+alignment = 0
+
+[node name="public_projects_btn" type="Button" parent="container/container/side_bar/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_lmrsc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7fxjq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wb288")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih0ti")
+toggle_mode = true
+button_group = ExtResource("5_avu2u")
+text = "public_projects_btn"
+alignment = 0
+
+[node name="social_btn" type="Button" parent="container/container/side_bar/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_lmrsc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7fxjq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wb288")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih0ti")
+toggle_mode = true
+button_group = ExtResource("5_avu2u")
+text = "social_btn"
+alignment = 0
+
+[node name="social_btn_other" type="HBoxContainer" parent="container/container/side_bar/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Control" type="Control" parent="container/container/side_bar/VBoxContainer/social_btn_other"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="container/container/side_bar/VBoxContainer/social_btn_other"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="my_profile_btn" type="Button" parent="container/container/side_bar/VBoxContainer/social_btn_other/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxFlat_15tqv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_22ww7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s2xcj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6hfyf")
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("8_fw1xa")
+text = "my_profile_btn"
+alignment = 0
+
+[node name="chat_btn" type="Button" parent="container/container/side_bar/VBoxContainer/social_btn_other/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxFlat_15tqv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_22ww7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s2xcj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6hfyf")
+toggle_mode = true
+button_group = ExtResource("8_fw1xa")
+text = "chat_btn"
+alignment = 0
+
+[node name="my_friends_btn" type="Button" parent="container/container/side_bar/VBoxContainer/social_btn_other/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxFlat_15tqv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_22ww7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s2xcj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6hfyf")
+toggle_mode = true
+button_group = ExtResource("8_fw1xa")
+text = "my_friends_btn"
+alignment = 0
+
+[node name="add_firends_btn" type="Button" parent="container/container/side_bar/VBoxContainer/social_btn_other/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxFlat_15tqv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_22ww7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s2xcj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6hfyf")
+toggle_mode = true
+button_group = ExtResource("8_fw1xa")
+text = "add_firends_btn"
+alignment = 0
+
+[node name="settings_btn" type="Button" parent="container/container/side_bar/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("6_0kqtp")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_lmrsc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7fxjq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wb288")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih0ti")
+toggle_mode = true
+button_group = ExtResource("5_avu2u")
+text = "settings_btn"
+alignment = 0
+
+[node name="Discord" type="TextureButton" parent="container/container/side_bar/VBoxContainer"]
+custom_minimum_size = Vector2(128, 15)
+layout_mode = 2
+size_flags_vertical = 10
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_2w1nw")
+texture_pressed = ExtResource("7_ytskd")
+texture_hover = ExtResource("7_ytskd")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="container/container/side_bar/VBoxContainer"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="container/container/side_bar/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+size_flags_vertical = 8
+color = Color(0.184314, 0.196078, 0.215686, 1)
+
+[node name="Control2" type="Control" parent="container/container/side_bar/VBoxContainer"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="container/container/side_bar/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("8_1t3ni")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxFlat_6w1gc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_78ibq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ufr3p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wdoci")
+text = "wbesite_btn"
+
+[node name="Label" type="Label" parent="container/container/side_bar/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.345098, 0.356863, 0.372549, 1)
+theme_override_fonts/font = ExtResource("8_1t3ni")
+theme_override_font_sizes/font_size = 12
+text = "Version : 1.0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="signal_bug_btn" type="Button" parent="container/container/side_bar/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_pressed_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_hover_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_pressed_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_focus_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_color = Color(0.0705882, 0.32549, 0.996078, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/focus = SubResource("StyleBoxFlat_p1gpb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cw3v7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_paqhy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_orfyu")
+text = "idea_bug"
+
+[node name="body" type="ScrollContainer" parent="container/container"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="projects" parent="container/container/body" instance=ExtResource("7_kf4kx")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [1193.0]
+
+[node name="public_projects" parent="container/container/body" instance=ExtResource("10_yqhtn")]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="settings" parent="container/container/body" instance=ExtResource("8_gptkw")]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_edit_vertical_guides_ = [382.0]
+
+[node name="social" parent="container/container/body" instance=ExtResource("12_1jcl6")]
+visible = false
+layout_mode = 2
+
+[node name="user_profile" parent="container/container/body" instance=ExtResource("13_l6r3i")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3500.0
+autostart = true
+
+[connection signal="pressed" from="container/container/side_bar/HBoxContainer/TextureRect" to="." method="_on_texture_rect_pressed"]
+[connection signal="pressed" from="container/container/side_bar/HBoxContainer/TextureRect/logout_container/logout_btn" to="." method="_on_logout_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/home_btn" to="." method="_on_home_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/HBoxContainer/VBoxContainer/my_project_btn" to="." method="_on_my_project_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/HBoxContainer/VBoxContainer/create_btn" to="." method="_on_create_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/HBoxContainer/VBoxContainer/join_btn" to="." method="_on_join_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/public_projects_btn" to="." method="_on_public_projects_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/social_btn" to="." method="_on_social_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/social_btn_other/VBoxContainer/my_profile_btn" to="." method="_on_my_profile_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/social_btn_other/VBoxContainer/chat_btn" to="." method="_on_chat_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/social_btn_other/VBoxContainer/my_friends_btn" to="." method="_on_my_friends_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/social_btn_other/VBoxContainer/add_firends_btn" to="." method="_on_add_firends_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/settings_btn" to="." method="_on_settings_btn_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/Discord" to="." method="_on_discord_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="container/container/side_bar/VBoxContainer/signal_bug_btn" to="." method="send_email"]
+[connection signal="visibility_changed" from="container/container/body/user_profile" to="." method="_on_user_profile_visibility_changed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

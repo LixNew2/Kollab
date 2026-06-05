@@ -1,0 +1,706 @@
+[gd_scene load_steps=33 format=3 uid="uid://c166mg7x8j5h3"]
+
+[ext_resource type="Script" path="res://scripts/projects/create_project_tab.gd" id="1_hn3yb"]
+[ext_resource type="ButtonGroup" uid="uid://bu3pykg1l5fxk" path="res://groups/button/choose_platform.tres" id="1_uhcev"]
+[ext_resource type="Texture2D" uid="uid://cx5qrhrjognpv" path="res://assets/ressources/load.png" id="6_yrqx5"]
+[ext_resource type="FontFile" uid="uid://byaols5h1jgiw" path="res://assets/themes/fonts/Inter-Regular.ttf" id="20_k5ga5"]
+[ext_resource type="FontFile" uid="uid://cv85ksv5s015u" path="res://assets/themes/fonts/GothamMedium.ttf" id="21_s7lwv"]
+[ext_resource type="FontFile" uid="uid://digpvcpm40o5d" path="res://assets/themes/fonts/Inter-Medium.ttf" id="22_1no02"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fi2dl"]
+bg_color = Color(0.6, 0.6, 0.6, 0.0627451)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.184314, 0.196078, 0.215686, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4sv7"]
+bg_color = Color(0.121569, 0.121569, 0.133333, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.184314, 0.196078, 0.215686, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eo2ji"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shnul"]
+bg_color = Color(0.136719, 0.140625, 0.148438, 1)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.183594, 0.195313, 0.214844, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_xh2bg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dde37"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdfrk"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyipo"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jd2s2"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqyw2"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.184314, 0.196078, 0.215686, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwxy6"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.509804, 0.72549, 1, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4alsa"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.184314, 0.196078, 0.215686, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 0.141176)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0phjv"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.509804, 0.72549, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_crejf"]
+bg_color = Color(0.6, 0.6, 0.6, 0.0627451)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_en56j"]
+bg_color = Color(0.0392157, 0.0392157, 0.0431373, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnbvb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r0202"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hm1y"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1amc"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_ixjt2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4n7h8"]
+resource_name = "default"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7e0qp"]
+_data = {
+"RESET": SubResource("Animation_ixjt2"),
+"default": SubResource("Animation_4n7h8")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wd3ld"]
+bg_color = Color(0.0705882, 0.32549, 0.996078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhtsm"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lq4p"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq18u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="create_project" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+script = ExtResource("1_hn3yb")
+
+[node name="choice_plat" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="same_plat_btn" type="Button" parent="choice_plat"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("22_1no02")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_fi2dl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d4sv7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d4sv7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_eo2ji")
+text = "plat_to_sameplat_btn"
+
+[node name="other_plat_btn" type="Button" parent="choice_plat"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("22_1no02")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_fi2dl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d4sv7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d4sv7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_eo2ji")
+text = "plat_to_otherplat_btn"
+
+[node name="container" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = 32.0
+offset_right = -64.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 64
+
+[node name="left_side" type="VBoxContainer" parent="container"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="platform" type="VBoxContainer" parent="container/left_side"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="container/left_side/platform"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("20_k5ga5")
+theme_override_font_sizes/font_size = 14
+text = "choose_plat"
+
+[node name="error" type="Label" parent="container/left_side/platform"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.811765, 0.0941176, 0.211765, 1)
+theme_override_fonts/font = ExtResource("22_1no02")
+theme_override_font_sizes/font_size = 14
+text = "plat_error"
+vertical_alignment = 1
+
+[node name="platform" type="Panel" parent="container/left_side/platform"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_shnul")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="container/left_side/platform/platform"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="fl_btn" type="Button" parent="container/left_side/platform/platform/HBoxContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+tooltip_text = "FL Studio"
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_xh2bg")
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dde37")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdfrk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nyipo")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jd2s2")
+toggle_mode = true
+button_group = ExtResource("1_uhcev")
+text = ".flp"
+
+[node name="als_btn" type="Button" parent="container/left_side/platform/platform/HBoxContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+tooltip_text = "Ableton Live"
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_xh2bg")
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dde37")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdfrk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nyipo")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jd2s2")
+toggle_mode = true
+button_group = ExtResource("1_uhcev")
+text = ".als"
+
+[node name="logic_btn" type="Button" parent="container/left_side/platform/platform/HBoxContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+tooltip_text = "Logic Pro"
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_xh2bg")
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dde37")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdfrk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nyipo")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jd2s2")
+toggle_mode = true
+button_group = ExtResource("1_uhcev")
+text = ".logic"
+
+[node name="cubase_btn" type="Button" parent="container/left_side/platform/platform/HBoxContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+tooltip_text = "Steinberg Cubase"
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_xh2bg")
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dde37")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdfrk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nyipo")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jd2s2")
+toggle_mode = true
+button_group = ExtResource("1_uhcev")
+text = ".cpr"
+
+[node name="reaper_btn" type="Button" parent="container/left_side/platform/platform/HBoxContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+tooltip_text = "REAPER"
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_xh2bg")
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dde37")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdfrk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nyipo")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jd2s2")
+toggle_mode = true
+button_group = ExtResource("1_uhcev")
+text = ".rpp"
+
+[node name="studio_btn" type="Button" parent="container/left_side/platform/platform/HBoxContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+tooltip_text = "Studio One"
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_xh2bg")
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dde37")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdfrk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nyipo")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jd2s2")
+toggle_mode = true
+button_group = ExtResource("1_uhcev")
+text = ".song"
+
+[node name="title" type="VBoxContainer" parent="container/left_side"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="container/left_side/title"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("20_k5ga5")
+theme_override_font_sizes/font_size = 14
+text = "title_project"
+
+[node name="error" type="Label" parent="container/left_side/title"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.811765, 0.0941176, 0.211765, 1)
+theme_override_fonts/font = ExtResource("22_1no02")
+theme_override_font_sizes/font_size = 14
+text = "title_error"
+vertical_alignment = 1
+
+[node name="title" type="LineEdit" parent="container/left_side/title"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_fonts/font = ExtResource("21_s7lwv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+context_menu_enabled = false
+
+[node name="desc" type="VBoxContainer" parent="container/left_side"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="container/left_side/desc"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("20_k5ga5")
+theme_override_font_sizes/font_size = 14
+text = "add_desc"
+
+[node name="desc" type="TextEdit" parent="container/left_side/desc"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_fonts/font = ExtResource("21_s7lwv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4alsa")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0phjv")
+context_menu_enabled = false
+
+[node name="file" type="VBoxContainer" parent="container/left_side"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="container/left_side/file"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("20_k5ga5")
+theme_override_font_sizes/font_size = 14
+text = "choose_f_p"
+
+[node name="error" type="Label" parent="container/left_side/file"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.811765, 0.0941176, 0.211765, 1)
+theme_override_fonts/font = ExtResource("22_1no02")
+theme_override_font_sizes/font_size = 14
+text = "path_error"
+vertical_alignment = 1
+
+[node name="bg_panel" type="Panel" parent="container/left_side/file"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_crejf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="container/left_side/file/bg_panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+
+[node name="path" type="Label" parent="container/left_side/file/bg_panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("22_1no02")
+text = "drag_and_drop"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="size" type="Label" parent="container/left_side/file/bg_panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NativeFileDialog" type="NativeFileDialog" parent="container/left_side/file/bg_panel"]
+title = "Open a Directory"
+file_mode = 2
+access = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="container/left_side/file"]
+visible = false
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_en56j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xnbvb")
+show_percentage = false
+
+[node name="error2" type="Label" parent="container/left_side/file"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.811765, 0.0941176, 0.211765, 1)
+theme_override_fonts/font = ExtResource("22_1no02")
+theme_override_font_sizes/font_size = 14
+text = "path_dir_error"
+vertical_alignment = 1
+
+[node name="right_side" type="VBoxContainer" parent="container"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="bpm" type="VBoxContainer" parent="container/right_side"]
+layout_mode = 2
+
+[node name="Label7" type="Label" parent="container/right_side/bpm"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("20_k5ga5")
+theme_override_font_sizes/font_size = 14
+text = "bpm_label"
+
+[node name="bpm" type="SpinBox" parent="container/right_side/bpm"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+max_value = 500.0
+
+[node name="max_users" type="VBoxContainer" parent="container/right_side"]
+layout_mode = 2
+
+[node name="max_users_label" type="Label" parent="container/right_side/max_users"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("20_k5ga5")
+theme_override_font_sizes/font_size = 14
+text = "max_users_label"
+
+[node name="max_users" type="SpinBox" parent="container/right_side/max_users"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+max_value = 99999.0
+value = 99999.0
+
+[node name="version" type="VBoxContainer" parent="container/right_side"]
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="container/right_side/version"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("20_k5ga5")
+theme_override_font_sizes/font_size = 14
+text = "version_label"
+
+[node name="Label5" type="Label" parent="container/right_side/version"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.811765, 0.0941176, 0.211765, 1)
+theme_override_fonts/font = ExtResource("21_s7lwv")
+theme_override_font_sizes/font_size = 14
+text = "version_error"
+vertical_alignment = 1
+
+[node name="LineEdit4" type="LineEdit" parent="container/right_side/version"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_fonts/font = ExtResource("21_s7lwv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+context_menu_enabled = false
+
+[node name="public" type="HBoxContainer" parent="container/right_side"]
+layout_mode = 2
+
+[node name="public_btn" type="CheckButton" parent="container/right_side/public"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r0202")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0hm1y")
+
+[node name="public_label" type="Label" parent="container/right_side/public"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("20_k5ga5")
+theme_override_font_sizes/font_size = 14
+text = "Public"
+vertical_alignment = 1
+
+[node name="blank" type="Control" parent="container/right_side"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="create_project_container" type="HBoxContainer" parent="container/right_side"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 15
+
+[node name="loading" type="Panel" parent="container/right_side/create_project_container"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_a1amc")
+
+[node name="icon" type="TextureRect" parent="container/right_side/create_project_container/loading"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(16, 16)
+texture = ExtResource("6_yrqx5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="container/right_side/create_project_container/loading"]
+libraries = {
+"": SubResource("AnimationLibrary_7e0qp")
+}
+autoplay = "default"
+
+[node name="back_btn" type="Button" parent="container/right_side/create_project_container"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 10
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("22_1no02")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_wd3ld")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhtsm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2lq4p")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tq18u")
+text = "back_btn"
+
+[node name="create_project_btn" type="Button" parent="container/right_side/create_project_container"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("22_1no02")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_wd3ld")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhtsm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2lq4p")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tq18u")
+text = "create_project"
+
+[connection signal="pressed" from="choice_plat/same_plat_btn" to="." method="choice_plat" binds= [0]]
+[connection signal="pressed" from="choice_plat/other_plat_btn" to="." method="choice_plat" binds= [1]]
+[connection signal="pressed" from="container/left_side/platform/platform/HBoxContainer/fl_btn" to="." method="platform_btn_pressed" binds= [".flp"]]
+[connection signal="pressed" from="container/left_side/platform/platform/HBoxContainer/als_btn" to="." method="platform_btn_pressed" binds= [".als"]]
+[connection signal="pressed" from="container/left_side/platform/platform/HBoxContainer/logic_btn" to="." method="platform_btn_pressed" binds= [".logic"]]
+[connection signal="pressed" from="container/left_side/platform/platform/HBoxContainer/cubase_btn" to="." method="platform_btn_pressed" binds= [".cpr"]]
+[connection signal="pressed" from="container/left_side/platform/platform/HBoxContainer/reaper_btn" to="." method="platform_btn_pressed" binds= [".rpp"]]
+[connection signal="pressed" from="container/left_side/platform/platform/HBoxContainer/studio_btn" to="." method="platform_btn_pressed" binds= [".song"]]
+[connection signal="text_changed" from="container/left_side/title/title" to="." method="title_text_changed"]
+[connection signal="text_changed" from="container/left_side/desc/desc" to="." method="set_desc"]
+[connection signal="gui_input" from="container/left_side/file/bg_panel/VBoxContainer" to="." method="_on_v_box_container_gui_input"]
+[connection signal="dir_selected" from="container/left_side/file/bg_panel/NativeFileDialog" to="." method="_on_native_file_dialog_dir_selected"]
+[connection signal="value_changed" from="container/right_side/bpm/bpm" to="." method="bpm_value_changed"]
+[connection signal="value_changed" from="container/right_side/max_users/max_users" to="." method="_on_max_users_value_changed"]
+[connection signal="text_changed" from="container/right_side/version/LineEdit4" to="." method="version_text_changed"]
+[connection signal="pressed" from="container/right_side/public/public_btn" to="." method="_on_public_btn_pressed"]
+[connection signal="pressed" from="container/right_side/create_project_container/back_btn" to="." method="clear_all"]
+[connection signal="pressed" from="container/right_side/create_project_container/create_project_btn" to="." method="create_project"]

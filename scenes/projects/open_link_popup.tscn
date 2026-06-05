@@ -1,0 +1,193 @@
+[gd_scene load_steps=14 format=3 uid="uid://bt47u3m83q7bx"]
+
+[ext_resource type="Script" path="res://scripts/projects/delete_popup.gd" id="1_3bllf"]
+[ext_resource type="Animation" uid="uid://dpr03yhmaiqkv" path="res://animations/popup.res" id="2_i1ugw"]
+[ext_resource type="FontFile" uid="uid://digpvcpm40o5d" path="res://assets/themes/fonts/Inter-Medium.ttf" id="3_ev22v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egh0e"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.184314, 0.196078, 0.215686, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 0.380392)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ag741"]
+_data = {
+"popup": ExtResource("2_i1ugw")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehv7s"]
+bg_color = Color(0.0705882, 0.32549, 0.996078, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psl13"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5p14"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lt4xu"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eg1a2"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.415686, 0.415686, 0.45098, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbueu"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.270588, 0.27451, 0.298039, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ap21p"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.270588, 0.27451, 0.298039, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxdqn"]
+draw_center = false
+
+[node name="Control" type="ColorRect"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+script = ExtResource("1_3bllf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.607843)
+
+[node name="externe_close_btn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = -80.0
+offset_right = 195.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(160, 64)
+theme_override_styles/panel = SubResource("StyleBoxFlat_egh0e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
+libraries = {
+"": SubResource("AnimationLibrary_ag741")
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(0.803922, 0.0117647, 0.0117647, 1)
+theme_override_fonts/font = ExtResource("3_ev22v")
+text = "open_link_popup_title"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_ev22v")
+theme_override_font_sizes/font_size = 12
+text = "open_link_popup_subtitle"
+horizontal_alignment = 1
+
+[node name="open_btn" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_ev22v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ehv7s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_psl13")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r5p14")
+theme_override_styles/focus = SubResource("StyleBoxFlat_lt4xu")
+text = "open_btn"
+
+[node name="close_btn" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_ev22v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eg1a2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wbueu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ap21p")
+theme_override_styles/focus = SubResource("StyleBoxFlat_yxdqn")
+text = "popup_close_btn"
+
+[connection signal="pressed" from="externe_close_btn" to="." method="_on_close_btn_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/close_btn" to="." method="_on_close_btn_pressed"]

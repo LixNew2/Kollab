@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://doyldbwno4tvq"]
+
+[ext_resource type="StyleBox" uid="uid://duq61xb25fgu7" path="res://assets/themes/home_side_top.tres" id="1_egxky"]
+[ext_resource type="Script" path="res://scripts/hotbar.gd" id="2_7lioa"]
+[ext_resource type="Texture2D" uid="uid://cme0yobq07c3y" path="res://assets/ressources/close.png" id="2_ohto1"]
+[ext_resource type="Texture2D" uid="uid://dwvcocfior1je" path="res://assets/ressources/min.png" id="3_skupg"]
+[ext_resource type="Texture2D" uid="uid://bra5hog2x3tnt" path="res://assets/ressources/maximize.png" id="4_r0plp"]
+
+[node name="hotbar" type="Panel"]
+custom_minimum_size = Vector2(0, 42)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("1_egxky")
+script = ExtResource("2_7lioa")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_right = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="minimise_btn" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_skupg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="maximize_btn" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_r0plp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="close_btn" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_ohto1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="HBoxContainer/minimise_btn" to="." method="_on_min_pressed"]
+[connection signal="pressed" from="HBoxContainer/maximize_btn" to="." method="_on_maximize_btn_pressed"]
+[connection signal="pressed" from="HBoxContainer/close_btn" to="." method="_on_close_pressed"]

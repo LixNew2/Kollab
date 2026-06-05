@@ -1,0 +1,55 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Kollab"
+run/main_scene="res://scenes/update.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Vedg/Kollab"
+config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(0.0705882, 0.0705882, 0.0784314, 1)
+boot_splash/show_image=false
+boot_splash/fullsize=false
+config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
+Firebase="*res://scripts/firebase.gd"
+ProjectsManager="*res://scripts/projects_manager.gd"
+
+[display]
+
+window/size/viewport_width=1210
+window/size/viewport_height=720
+window/vsync/vsync_mode=0
+window/stretch/mode.macos="canvas_items"
+window/stretch/aspect.macos="expand"
+
+[editor]
+
+run/main_run_args="dev"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/native_dialogs/plugin.cfg")
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/traduction/general.en.translation", "res://assets/traduction/general.fr.translation")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+textures/lossless_compression/force_png=true
+textures/default_filters/use_nearest_mipmap_filter=true
+anti_aliasing/quality/msaa_2d=2

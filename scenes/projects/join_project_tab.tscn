@@ -1,0 +1,328 @@
+[gd_scene load_steps=17 format=3 uid="uid://deookrbpk18co"]
+
+[ext_resource type="Script" path="res://scripts/projects/join_project_tab.gd" id="1_l1hoj"]
+[ext_resource type="FontFile" uid="uid://digpvcpm40o5d" path="res://assets/themes/fonts/Inter-Medium.ttf" id="1_ubypu"]
+[ext_resource type="FontFile" uid="uid://cv85ksv5s015u" path="res://assets/themes/fonts/GothamMedium.ttf" id="2_u70jn"]
+[ext_resource type="FontFile" uid="uid://byaols5h1jgiw" path="res://assets/themes/fonts/Inter-Regular.ttf" id="3_nsmba"]
+[ext_resource type="Texture2D" uid="uid://cx5qrhrjognpv" path="res://assets/ressources/load.png" id="5_vf58c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqyw2"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.184314, 0.196078, 0.215686, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwxy6"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.509804, 0.72549, 1, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wd3ld"]
+bg_color = Color(0.0705882, 0.32549, 0.996078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhtsm"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lq4p"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq18u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2w61k"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.183594, 0.195313, 0.214844, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g747c"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_ixjt2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4n7h8"]
+resource_name = "default"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7e0qp"]
+_data = {
+"RESET": SubResource("Animation_ixjt2"),
+"default": SubResource("Animation_4n7h8")
+}
+
+[node name="join_project" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+script = ExtResource("1_l1hoj")
+
+[node name="container" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="key" type="VBoxContainer" parent="container"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Label" type="Label" parent="container/key"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_nsmba")
+text = "user_sharing_key_label"
+
+[node name="key" type="LineEdit" parent="container/key"]
+custom_minimum_size = Vector2(512, 33)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/selection_color = Color(0.509804, 0.72549, 1, 1)
+theme_override_fonts/font = ExtResource("1_ubypu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+placeholder_text = "exemple_user_key"
+alignment = 1
+context_menu_enabled = false
+
+[node name="error_key" type="Label" parent="container/key"]
+visible = false
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.811765, 0.0941176, 0.211765, 1)
+theme_override_fonts/font = ExtResource("1_ubypu")
+text = "error_key"
+
+[node name="confirm_key_btn" type="Button" parent="container/key"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_ubypu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_wd3ld")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhtsm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2lq4p")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tq18u")
+text = "confirm_key"
+
+[node name="project_info" type="VBoxContainer" parent="container"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="NativeFileDialog" type="NativeFileDialog" parent="container/project_info"]
+title = "Open a Directory"
+file_mode = 2
+
+[node name="FileDialog" type="FileDialog" parent="container/project_info"]
+title = "Open a Directory"
+size = Vector2i(600, 400)
+ok_button_text = "Sélectionner le dossier courant"
+file_mode = 2
+access = 2
+
+[node name="pj_title_label" type="Label" parent="container/project_info"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_nsmba")
+text = "title_project_join"
+
+[node name="pj_title" type="LineEdit" parent="container/project_info"]
+custom_minimum_size = Vector2(512, 33)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_u70jn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_2w61k")
+editable = false
+context_menu_enabled = false
+
+[node name="pj_desc_label" type="Label" parent="container/project_info"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_nsmba")
+text = "desc_project_join"
+
+[node name="pj_desc" type="LineEdit" parent="container/project_info"]
+custom_minimum_size = Vector2(512, 33)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_u70jn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_2w61k")
+editable = false
+context_menu_enabled = false
+
+[node name="pj_plat_label" type="Label" parent="container/project_info"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_nsmba")
+text = "plat_project_join"
+
+[node name="pj_plat" type="LineEdit" parent="container/project_info"]
+custom_minimum_size = Vector2(512, 33)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_u70jn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_2w61k")
+editable = false
+context_menu_enabled = false
+
+[node name="error" type="Label" parent="container/project_info"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.811765, 0.0941176, 0.211765, 1)
+theme_override_fonts/font = ExtResource("1_ubypu")
+theme_override_font_sizes/font_size = 14
+text = "join_error"
+vertical_alignment = 1
+
+[node name="error2" type="Label" parent="container/project_info"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.811765, 0.0941176, 0.211765, 1)
+theme_override_fonts/font = ExtResource("1_ubypu")
+theme_override_font_sizes/font_size = 14
+text = "join_error2"
+vertical_alignment = 1
+
+[node name="join_project_btn" type="Button" parent="container/project_info"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_ubypu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_wd3ld")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhtsm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2lq4p")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tq18u")
+text = "join_project"
+
+[node name="loading" type="Panel" parent="container/project_info"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_g747c")
+
+[node name="icon" type="TextureRect" parent="container/project_info/loading"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(16, 16)
+texture = ExtResource("5_vf58c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="container/project_info/loading"]
+libraries = {
+"": SubResource("AnimationLibrary_7e0qp")
+}
+autoplay = "default"
+
+[connection signal="text_changed" from="container/key/key" to="." method="_on_key_text_changed"]
+[connection signal="pressed" from="container/key/confirm_key_btn" to="." method="get_projects_infos"]
+[connection signal="dir_selected" from="container/project_info/NativeFileDialog" to="." method="_on_native_file_dialog_dir_selected"]
+[connection signal="dir_selected" from="container/project_info/FileDialog" to="." method="_on_file_dialog_dir_selected"]
+[connection signal="pressed" from="container/project_info/join_project_btn" to="." method="join_project"]

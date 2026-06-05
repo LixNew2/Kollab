@@ -1,0 +1,144 @@
+[gd_scene load_steps=11 format=3 uid="uid://csllvg0b0wnw"]
+
+[ext_resource type="Script" path="res://scripts/projects/commentary_item.gd" id="1_vx5rd"]
+[ext_resource type="Texture2D" uid="uid://bj1atrgt8nnft" path="res://assets/ressources/up.png" id="2_nh6fd"]
+[ext_resource type="FontFile" uid="uid://digpvcpm40o5d" path="res://assets/themes/fonts/Inter-Medium.ttf" id="2_qapl3"]
+[ext_resource type="Texture2D" uid="uid://ciqbtmxc3ep4a" path="res://assets/ressources/up_hover.png" id="3_xdxr3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtf17"]
+bg_color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xg7uv"]
+bg_color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7kgy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avbgx"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ovax"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57jdy"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 0)
+
+[node name="commentary" type="VBoxContainer"]
+anchors_preset = -1
+anchor_right = 1.005
+offset_right = -0.0500488
+offset_bottom = 80.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+script = ExtResource("1_vx5rd")
+
+[node name="id" type="Label" parent="."]
+visible = false
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 0
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="username" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_qapl3")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_dtf17")
+text = "USERNAME"
+horizontal_alignment = 1
+
+[node name="time" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_qapl3")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_dtf17")
+text = "time"
+horizontal_alignment = 2
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[node name="text" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_qapl3")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_dtf17")
+vertical_alignment = 2
+autowrap_mode = 3
+justification_flags = 161
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_xg7uv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Control2" type="Control" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="delete_btn_comments" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0705882, 0.32549, 0.996078, 1)
+theme_override_colors/font_pressed_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_hover_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_focus_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_q7kgy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_avbgx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ovax")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57jdy")
+text = "delete_comment_btn"
+
+[node name="Control" type="Control" parent="Panel/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="upvotes_nbr" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="upvotes" type="TextureButton" parent="Panel/HBoxContainer"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("2_nh6fd")
+texture_hover = ExtResource("3_xdxr3")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="gui_input" from="HBoxContainer/username" to="." method="_on_username_gui_input"]

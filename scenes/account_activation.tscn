@@ -1,0 +1,231 @@
+[gd_scene load_steps=13 format=3 uid="uid://dhoj1tkjc7j0p"]
+
+[ext_resource type="Script" path="res://scripts/account_activation.gd" id="1_8s4li"]
+[ext_resource type="StyleBox" uid="uid://cgbebtrodt5yc" path="res://assets/themes/border.tres" id="2_ihppc"]
+[ext_resource type="FontFile" uid="uid://digpvcpm40o5d" path="res://assets/themes/fonts/Inter-Medium.ttf" id="4_sbqu2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syrj5"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.2, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brfja"]
+bg_color = Color(0.0705882, 0.32549, 0.996078, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpk1b"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ab67h"]
+bg_color = Color(0.0705882, 0.32549, 0.996078, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0okvk"]
+draw_center = false
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mi46b"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3tgki"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rw7ol"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3k21j"]
+draw_center = false
+
+[node name="account_activation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8s4li")
+
+[node name="bg2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.254902, 0.254902, 0.262745, 1)
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "account_activation_label"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key" type="LineEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(425, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_styles/normal = ExtResource("2_ihppc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_syrj5")
+placeholder_text = "key_placehorlder"
+alignment = 1
+context_menu_enabled = false
+caret_blink_interval = 10.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="error_key" type="Label" parent="VBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.811765, 0.0941176, 0.211765, 1)
+theme_override_fonts/font = ExtResource("4_sbqu2")
+theme_override_font_sizes/font_size = 14
+text = "error_key"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="confirm_key" type="Button" parent="VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(425, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_brfja")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lpk1b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ab67h")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0okvk")
+text = "confirm_login_register_btn"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(425, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Label2" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_font_sizes/font_size = 14
+text = "not_key"
+vertical_alignment = 2
+
+[node name="buy_key_btn" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0705882, 0.32549, 0.996078, 1)
+theme_override_colors/font_pressed_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_hover_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_focus_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_mi46b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3tgki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rw7ol")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3k21j")
+text = "buy_key_btn"
+
+[node name="not_now_btn" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0705882, 0.32549, 0.996078, 1)
+theme_override_colors/font_pressed_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_hover_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_focus_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_mi46b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3tgki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rw7ol")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3k21j")
+text = "not_yet"
+
+[node name="free_trial_btn" type="Button" parent="VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0705882, 0.32549, 0.996078, 1)
+theme_override_colors/font_pressed_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_hover_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_focus_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_mi46b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3tgki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rw7ol")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3k21j")
+text = "free_trial_btn"
+
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/confirm_key" to="." method="_on_confirm_key_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/HBoxContainer/buy_key_btn" to="." method="_on_buy_key_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/HBoxContainer/not_now_btn" to="." method="_on_not_now_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/free_trial_btn" to="." method="_on_free_trial_btn_pressed"]

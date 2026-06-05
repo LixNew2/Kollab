@@ -1,0 +1,199 @@
+[gd_scene load_steps=15 format=3 uid="uid://2ns3l83ig35v"]
+
+[ext_resource type="Script" path="res://scripts/projects/social.gd" id="1_nlm5j"]
+[ext_resource type="FontFile" uid="uid://xhmnq725gcl5" path="res://assets/themes/fonts/Sohne-Fett.otf" id="2_tkl33"]
+[ext_resource type="Texture2D" uid="uid://cadxwgvjx7p46" path="res://assets/ressources/coooch.png" id="3_q6j3h"]
+[ext_resource type="FontFile" uid="uid://ktnbcysd8inp" path="res://assets/themes/fonts/Inter-Bold.ttf" id="4_gli1t"]
+[ext_resource type="PackedScene" uid="uid://wvefudj4hoca" path="res://scenes/projects/my_profile.tscn" id="5_03fbm"]
+[ext_resource type="ButtonGroup" uid="uid://omjirxuyqgjm" path="res://groups/home_btn.tres" id="5_skf74"]
+[ext_resource type="PackedScene" uid="uid://dcavh2sngrcvm" path="res://scenes/projects/chat.tscn" id="6_tecqj"]
+[ext_resource type="PackedScene" uid="uid://ci2mhu85jo4l8" path="res://scenes/projects/add_friends.tscn" id="7_r4xhu"]
+[ext_resource type="PackedScene" uid="uid://dptpfj6mi65eo" path="res://scenes/projects/my_friends.tscn" id="8_bf3v0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kydtb"]
+bg_color = Color(0.128906, 0.148438, 0.179688, 1)
+draw_center = false
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0myl"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+draw_center = false
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ih0ti"]
+bg_color = Color(0.0705882, 0.0705882, 0.0784314, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hx5aq"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+draw_center = false
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4vj7"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+draw_center = false
+border_width_bottom = 3
+
+[node name="social" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+script = ExtResource("1_nlm5j")
+
+[node name="top_bar" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 0
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[node name="container" type="VBoxContainer" parent="top_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 10.0
+offset_right = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="home_label" type="HBoxContainer" parent="top_bar/container"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="home_label" type="Label" parent="top_bar/container/home_label"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_tkl33")
+theme_override_font_sizes/font_size = 35
+text = "social_title"
+vertical_alignment = 2
+
+[node name="TextureButton" type="TextureButton" parent="top_bar/container/home_label"]
+visible = false
+custom_minimum_size = Vector2(22, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("3_q6j3h")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Home" type="HBoxContainer" parent="top_bar/container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="my_profile_btn" type="Button" parent="top_bar/container/Home"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("4_gli1t")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h0myl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih0ti")
+toggle_mode = true
+button_group = ExtResource("5_skf74")
+text = "my_profile_btn"
+alignment = 0
+
+[node name="chat_btn" type="Button" parent="top_bar/container/Home"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("4_gli1t")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hx5aq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih0ti")
+toggle_mode = true
+button_group = ExtResource("5_skf74")
+text = "chat_btn"
+alignment = 0
+
+[node name="my_friends_btn" type="Button" parent="top_bar/container/Home"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("4_gli1t")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b4vj7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih0ti")
+toggle_mode = true
+button_group = ExtResource("5_skf74")
+text = "my_friends_btn"
+alignment = 0
+
+[node name="add_firends_btn" type="Button" parent="top_bar/container/Home"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("4_gli1t")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b4vj7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih0ti")
+toggle_mode = true
+button_group = ExtResource("5_skf74")
+text = "add_firends_btn"
+alignment = 0
+
+[node name="ColorRect" type="ColorRect" parent="top_bar/container"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+size_flags_vertical = 8
+color = Color(0.184314, 0.196078, 0.215686, 1)
+
+[node name="my_profile" parent="." instance=ExtResource("5_03fbm")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 3
+metadata/_edit_vertical_guides_ = [828.0, 219.0]
+
+[node name="chat" parent="." instance=ExtResource("6_tecqj")]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+script = null
+
+[node name="add_firends" parent="." instance=ExtResource("7_r4xhu")]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+script = null
+
+[node name="my_firends" parent="." instance=ExtResource("8_bf3v0")]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+script = null
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="top_bar/container/Home/my_profile_btn" to="." method="_on_my_profile_btn_pressed"]
+[connection signal="pressed" from="top_bar/container/Home/chat_btn" to="." method="_on_chat_btn_pressed"]
+[connection signal="pressed" from="top_bar/container/Home/my_friends_btn" to="." method="_on_my_friends_btn_pressed"]
+[connection signal="pressed" from="top_bar/container/Home/add_firends_btn" to="." method="_on_add_firends_btn_pressed"]

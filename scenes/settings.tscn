@@ -1,0 +1,603 @@
+[gd_scene load_steps=21 format=3 uid="uid://d3ilc2tmi0akm"]
+
+[ext_resource type="Script" path="res://scripts/settings.gd" id="1_dglc2"]
+[ext_resource type="FontFile" uid="uid://xhmnq725gcl5" path="res://assets/themes/fonts/Sohne-Fett.otf" id="1_pvpyr"]
+[ext_resource type="FontFile" uid="uid://cv85ksv5s015u" path="res://assets/themes/fonts/GothamMedium.ttf" id="2_f663p"]
+[ext_resource type="FontFile" uid="uid://digpvcpm40o5d" path="res://assets/themes/fonts/Inter-Medium.ttf" id="3_7464k"]
+[ext_resource type="FontFile" uid="uid://dkxdo2jnwrrsp" path="res://assets/themes/fonts/Sohne-Buch.otf" id="3_r7444"]
+[ext_resource type="Texture2D" uid="uid://dw6tf27i2lxxn" path="res://assets/ressources/foll.png" id="4_sg583"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j71f6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ltyi"]
+bg_color = Color(0.128906, 0.148438, 0.179688, 1)
+draw_center = false
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3aqq5"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+draw_center = false
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y0l7m"]
+bg_color = Color(0.0705882, 0.0705882, 0.0784314, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwxy6"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.509804, 0.72549, 1, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqyw2"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.184314, 0.196078, 0.215686, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jby72"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7nr77"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lelh"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xk1dl"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq18u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhtsm"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lq4p"]
+bg_color = Color(0.0705882, 0.32549, 0.996078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wd3ld"]
+bg_color = Color(0.0705882, 0.32549, 0.996078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="settings" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+script = ExtResource("1_dglc2")
+
+[node name="settings_top" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="settings_top"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 10.0
+offset_right = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_top/VBoxContainer"]
+layout_mode = 2
+
+[node name="settings_label" type="Label" parent="settings_top/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_pvpyr")
+theme_override_font_sizes/font_size = 35
+text = "settings_label"
+vertical_alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_top/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="settings_top/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_fonts/font = ExtResource("3_r7444")
+theme_override_font_sizes/font_size = 14
+text = "key_expiration"
+
+[node name="Label2" type="Label" parent="settings_top/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_r7444")
+theme_override_font_sizes/font_size = 14
+
+[node name="Settings" type="HBoxContainer" parent="settings_top/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="general_btn" type="Button" parent="settings_top/VBoxContainer/Settings"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("2_f663p")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_j71f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6ltyi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3aqq5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_y0l7m")
+toggle_mode = true
+button_pressed = true
+text = "general_btn"
+alignment = 0
+
+[node name="ColorRect" type="ColorRect" parent="settings_top/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+color = Color(0.184314, 0.196078, 0.215686, 1)
+
+[node name="settings_box" type="ColorRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[node name="settings_container" type="VBoxContainer" parent="settings_box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 21.0
+offset_right = -32.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="exe_container" type="VBoxContainer" parent="settings_box/settings_container"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="exe" type="VBoxContainer" parent="settings_box/settings_container/exe_container"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="file_dialog" type="FileDialog" parent="settings_box/settings_container/exe_container/exe"]
+title = "Open a File"
+size = Vector2i(600, 400)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.exe")
+
+[node name="exe_title" type="Label" parent="settings_box/settings_container/exe_container/exe"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pvpyr")
+theme_override_font_sizes/font_size = 20
+text = "exe_path"
+vertical_alignment = 1
+
+[node name="exe_path_container" type="HBoxContainer" parent="settings_box/settings_container/exe_container/exe"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 80
+
+[node name="left_box" type="VBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="fl_studio" type="VBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box"]
+layout_mode = 2
+
+[node name="fl_path_label" type="Label" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/fl_studio"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_r7444")
+text = "fl_path"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/fl_studio"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="fl_path" type="LineEdit" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/fl_studio/HBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_r7444")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+context_menu_enabled = false
+
+[node name="fl_btn_path" type="TextureButton" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/fl_studio/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_sg583")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="albeton_live" type="VBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box"]
+layout_mode = 2
+
+[node name="als_path_label" type="Label" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/albeton_live"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_r7444")
+text = "als_path"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/albeton_live"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="als_path" type="LineEdit" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/albeton_live/HBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_r7444")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+context_menu_enabled = false
+
+[node name="als_btn_path" type="TextureButton" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/albeton_live/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_sg583")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="logic_pro" type="VBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box"]
+layout_mode = 2
+
+[node name="logic_path_label" type="Label" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/logic_pro"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_r7444")
+text = "logic_pro_path"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/logic_pro"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="logic_path" type="LineEdit" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/logic_pro/HBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_r7444")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_gqyw2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+context_menu_enabled = false
+
+[node name="logic_btn_path" type="TextureButton" parent="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/logic_pro/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_sg583")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="right_box" type="VBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="cubase" type="VBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box"]
+layout_mode = 2
+
+[node name="cubase_path_label" type="Label" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/cubase"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("3_r7444")
+text = "cubase_path"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/cubase"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="cubase_path" type="LineEdit" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/cubase/HBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_r7444")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+context_menu_enabled = false
+
+[node name="cubase_btn_path" type="TextureButton" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/cubase/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_sg583")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="reaper" type="VBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box"]
+layout_mode = 2
+
+[node name="reaper_path_label" type="Label" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/reaper"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_r7444")
+text = "reaper_path"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/reaper"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="reaper_path" type="LineEdit" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/reaper/HBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_r7444")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+context_menu_enabled = false
+
+[node name="reaper_btn_path" type="TextureButton" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/reaper/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_sg583")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="studio_one" type="VBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box"]
+layout_mode = 2
+
+[node name="studio_path_label" type="Label" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/studio_one"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_r7444")
+text = "studio_path"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/studio_one"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="studio_path" type="LineEdit" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/studio_one/HBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_r7444")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+context_menu_enabled = false
+
+[node name="studio_btn_path" type="TextureButton" parent="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/studio_one/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_sg583")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="error" type="Label" parent="settings_box/settings_container/exe_container/exe"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.811765, 0.0941176, 0.211765, 1)
+theme_override_fonts/font = ExtResource("3_7464k")
+theme_override_font_sizes/font_size = 14
+text = "exe_error"
+vertical_alignment = 1
+
+[node name="NativeFileDialog" type="NativeFileDialog" parent="settings_box/settings_container/exe_container/exe"]
+title = "Open a File"
+file_mode = 0
+access = 2
+
+[node name="new_key_container" type="VBoxContainer" parent="settings_box/settings_container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="settings_box/settings_container/new_key_container"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="exe_title" type="Label" parent="settings_box/settings_container/new_key_container/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pvpyr")
+theme_override_font_sizes/font_size = 20
+text = "new_activation_key"
+vertical_alignment = 1
+
+[node name="new_key" type="Label" parent="settings_box/settings_container/new_key_container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_r7444")
+text = "label_key"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_box/settings_container/new_key_container"]
+layout_mode = 2
+theme_override_constants/separation = 160
+
+[node name="new_key" type="LineEdit" parent="settings_box/settings_container/new_key_container/HBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_r7444")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwxy6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqyw2")
+placeholder_text = "exemple_new_activation_key"
+alignment = 1
+context_menu_enabled = false
+
+[node name="Control" type="Control" parent="settings_box/settings_container/new_key_container/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="error_key" type="Label" parent="settings_box/settings_container/new_key_container"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.811765, 0.0941176, 0.211765, 1)
+theme_override_fonts/font = ExtResource("3_7464k")
+theme_override_font_sizes/font_size = 14
+text = "error_key"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="settings_box/settings_container/new_key_container"]
+custom_minimum_size = Vector2(425, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="Label2" type="Label" parent="settings_box/settings_container/new_key_container/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_font_sizes/font_size = 14
+text = "not_key"
+vertical_alignment = 2
+
+[node name="buy_key_btn" type="Button" parent="settings_box/settings_container/new_key_container/HBoxContainer2"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_pressed_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_hover_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_pressed_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_focus_color = Color(0.00392157, 0.2, 0.992157, 1)
+theme_override_colors/font_color = Color(0.0705882, 0.32549, 0.996078, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_jby72")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7nr77")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2lelh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xk1dl")
+text = "buy_key_btn"
+
+[node name="language" type="VBoxContainer" parent="settings_box/settings_container"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="language_label" type="Label" parent="settings_box/settings_container/language"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pvpyr")
+theme_override_font_sizes/font_size = 20
+text = "language_label"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_box/settings_container/language"]
+layout_mode = 2
+
+[node name="choice_lang" type="OptionButton" parent="settings_box/settings_container/language/HBoxContainer"]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="confirm_btn_container" type="HBoxContainer" parent="settings_box/settings_container"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="settings_box/settings_container/confirm_btn_container"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="terms_of_use" type="Button" parent="settings_box/settings_container/confirm_btn_container/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_pressed_color = Color(0.00392157, 0.2, 0.992157, 0.439216)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 0.580392)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.580392)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.439216)
+theme_override_colors/font_color = Color(1, 1, 1, 0.439216)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/focus = SubResource("StyleBoxFlat_jby72")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7nr77")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2lelh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xk1dl")
+text = "terms_condition_use_label"
+
+[node name="confirm_settings" type="Button" parent="settings_box/settings_container/confirm_btn_container"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_7464k")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxFlat_tq18u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhtsm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2lq4p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wd3ld")
+text = "confirm_settings"
+alignment = 0
+
+[connection signal="pressed" from="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/fl_studio/HBoxContainer/fl_btn_path" to="." method="settings_btns_pressed" binds= ["fl"]]
+[connection signal="pressed" from="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/albeton_live/HBoxContainer/als_btn_path" to="." method="settings_btns_pressed" binds= ["als"]]
+[connection signal="pressed" from="settings_box/settings_container/exe_container/exe/exe_path_container/left_box/logic_pro/HBoxContainer/logic_btn_path" to="." method="settings_btns_pressed" binds= ["logic"]]
+[connection signal="pressed" from="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/cubase/HBoxContainer/cubase_btn_path" to="." method="settings_btns_pressed" binds= ["cubase"]]
+[connection signal="pressed" from="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/reaper/HBoxContainer/reaper_btn_path" to="." method="settings_btns_pressed" binds= ["reaper"]]
+[connection signal="pressed" from="settings_box/settings_container/exe_container/exe/exe_path_container/right_box/studio_one/HBoxContainer/studio_btn_path" to="." method="settings_btns_pressed" binds= ["studio"]]
+[connection signal="file_selected" from="settings_box/settings_container/exe_container/exe/NativeFileDialog" to="." method="_on_native_file_dialog_file_selected"]
+[connection signal="pressed" from="settings_box/settings_container/new_key_container/HBoxContainer2/buy_key_btn" to="." method="_on_buy_key_btn_pressed"]
+[connection signal="pressed" from="settings_box/settings_container/confirm_btn_container/VBoxContainer2/terms_of_use" to="." method="_on_terms_of_use_pressed"]
+[connection signal="pressed" from="settings_box/settings_container/confirm_btn_container/confirm_settings" to="." method="confirm_settings"]

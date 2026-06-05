@@ -1,0 +1,223 @@
+[gd_scene load_steps=16 format=3 uid="uid://k1q3vbdu4ec8"]
+
+[ext_resource type="Script" path="res://scripts/projects/projects.gd" id="1_cumpv"]
+[ext_resource type="FontFile" uid="uid://ktnbcysd8inp" path="res://assets/themes/fonts/Inter-Bold.ttf" id="1_konqy"]
+[ext_resource type="ButtonGroup" uid="uid://omjirxuyqgjm" path="res://groups/home_btn.tres" id="2_4joyc"]
+[ext_resource type="FontFile" uid="uid://xhmnq725gcl5" path="res://assets/themes/fonts/Sohne-Fett.otf" id="2_ltfem"]
+[ext_resource type="PackedScene" uid="uid://c166mg7x8j5h3" path="res://scenes/projects/create_project_tab.tscn" id="3_e5ng3"]
+[ext_resource type="Texture2D" uid="uid://cadxwgvjx7p46" path="res://assets/ressources/coooch.png" id="3_nhmh4"]
+[ext_resource type="PackedScene" uid="uid://bdb12hmjqarkn" path="res://scenes/projects/my_projects_tab.tscn" id="4_5hhvq"]
+[ext_resource type="PackedScene" uid="uid://deookrbpk18co" path="res://scenes/projects/join_project_tab.tscn" id="5_etrn7"]
+[ext_resource type="FontFile" uid="uid://digpvcpm40o5d" path="res://assets/themes/fonts/Inter-Medium.ttf" id="5_j26so"]
+[ext_resource type="Texture2D" uid="uid://dukr1a55rmvvk" path="res://assets/ressources/infini.png" id="6_38un0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kydtb"]
+bg_color = Color(0.128906, 0.148438, 0.179688, 1)
+draw_center = false
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0myl"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+draw_center = false
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ih0ti"]
+bg_color = Color(0.0705882, 0.0705882, 0.0784314, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hx5aq"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+draw_center = false
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4vj7"]
+bg_color = Color(0.188235, 0.196078, 0.211765, 1)
+draw_center = false
+border_width_bottom = 3
+
+[node name="projects" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+script = ExtResource("1_cumpv")
+metadata/_edit_vertical_guides_ = [1122.0]
+
+[node name="top_bar" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 0
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[node name="container" type="VBoxContainer" parent="top_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 10.0
+offset_right = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="home_label" type="HBoxContainer" parent="top_bar/container"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="home_label" type="Label" parent="top_bar/container/home_label"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_ltfem")
+theme_override_font_sizes/font_size = 35
+text = "home_label"
+vertical_alignment = 2
+
+[node name="TextureButton" type="TextureButton" parent="top_bar/container/home_label"]
+visible = false
+custom_minimum_size = Vector2(22, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("3_nhmh4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Home" type="HBoxContainer" parent="top_bar/container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="my_project_btn" type="Button" parent="top_bar/container/Home"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("1_konqy")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h0myl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih0ti")
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("2_4joyc")
+text = "my_project_btn"
+alignment = 0
+
+[node name="create_btn" type="Button" parent="top_bar/container/Home"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("1_konqy")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hx5aq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih0ti")
+toggle_mode = true
+button_group = ExtResource("2_4joyc")
+text = "create_btn"
+alignment = 0
+
+[node name="join_btn" type="Button" parent="top_bar/container/Home"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("1_konqy")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kydtb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b4vj7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih0ti")
+toggle_mode = true
+button_group = ExtResource("2_4joyc")
+text = "join_btn"
+alignment = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="top_bar/container/Home"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 15
+
+[node name="nbr_project_remaining" type="Label" parent="top_bar/container/Home/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("5_j26so")
+theme_override_font_sizes/font_size = 14
+text = "nbr_project_remaining"
+
+[node name="nbr2" type="Label" parent="top_bar/container/Home/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_j26so")
+theme_override_font_sizes/font_size = 14
+text = "0"
+horizontal_alignment = 2
+
+[node name="infini" type="TextureRect" parent="top_bar/container/Home/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(17, 17)
+layout_mode = 2
+texture = ExtResource("6_38un0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="nbr_project" type="Label" parent="top_bar/container/Home/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.647059, 0.658824, 0.678431, 1)
+theme_override_fonts/font = ExtResource("5_j26so")
+theme_override_font_sizes/font_size = 14
+text = "nbr_project"
+
+[node name="nbr1" type="Label" parent="top_bar/container/Home/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_j26so")
+theme_override_font_sizes/font_size = 14
+text = "0"
+horizontal_alignment = 2
+
+[node name="Control" type="Control" parent="top_bar/container/Home/HBoxContainer"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="top_bar/container"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+size_flags_vertical = 8
+color = Color(0.184314, 0.196078, 0.215686, 1)
+
+[node name="create_project" parent="." instance=ExtResource("3_e5ng3")]
+visible = false
+layout_mode = 2
+
+[node name="my_projects" parent="." instance=ExtResource("4_5hhvq")]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [1053.0]
+metadata/_edit_horizontal_guides_ = [40.0]
+
+[node name="join_project" parent="." instance=ExtResource("5_etrn7")]
+visible = false
+layout_mode = 2
+
+[connection signal="pressed" from="top_bar/container/Home/my_project_btn" to="." method="_on_my_project_btn_pressed"]
+[connection signal="pressed" from="top_bar/container/Home/create_btn" to="." method="_on_create_btn_pressed"]
+[connection signal="pressed" from="top_bar/container/Home/join_btn" to="." method="_on_join_btn_pressed"]
+[connection signal="gui_input" from="top_bar/container/Home/HBoxContainer/nbr1" to="." method="_collapse_extends"]

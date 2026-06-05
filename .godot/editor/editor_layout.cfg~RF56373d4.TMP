@@ -1,0 +1,26 @@
+[docks]
+
+dock_filesystem_split=0
+dock_filesystem_display_mode=0
+dock_filesystem_file_sort=0
+dock_filesystem_file_list_display_mode=1
+dock_split_2=0
+dock_split_3=0
+dock_hsplit_1=0
+dock_hsplit_2=270
+dock_hsplit_3=-285
+dock_hsplit_4=0
+dock_3="Scene,Import"
+dock_4="FileSystem"
+dock_5="Inspector,Node,History"
+
+[EditorNode]
+
+open_scenes=["res://scenes/home.tscn", "res://scenes/projects/create_project_tab.tscn", "res://scenes/projects/projects.tscn", "res://scenes/projects/my_projects_tab.tscn", "res://scenes/projects/project_item.tscn"]
+
+[ScriptEditor]
+
+open_scripts=["res://scripts/projects/create_project_tab.gd", "res://scripts/projects/delete_popup.gd", "res://scripts/firebase.gd", "res://scripts/global.gd", "res://scripts/home.gd", "res://scripts/hotbar.gd", "res://scripts/projects/join_project_tab.gd", "res://scripts/login_register.gd", "res://scripts/projects/my_projects_tab.gd", "res://scripts/projects/projects.gd", "res://scripts/projects_manager.gd", "res://scripts/projects/project_item.gd", "res://scripts/settings.gd", "res://scripts/update.gd"]
+open_help=["@GlobalScope", "AStar2D", "Button", "CanvasItem", "DisplayServer", "Object", "OS", "ProjectSettings"]
+script_split_offset=70
+list_split_offset=0

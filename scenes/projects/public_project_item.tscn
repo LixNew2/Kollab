@@ -1,0 +1,273 @@
+[gd_scene load_steps=18 format=3 uid="uid://uhicdpmurper"]
+
+[ext_resource type="Script" path="res://scripts/projects/public_project_item.gd" id="1_146bo"]
+[ext_resource type="FontFile" uid="uid://digpvcpm40o5d" path="res://assets/themes/fonts/Inter-Medium.ttf" id="2_sghjn"]
+[ext_resource type="Texture2D" uid="uid://cd18semrahyeg" path="res://assets/ressources/note_music.png" id="3_wnrl2"]
+[ext_resource type="Texture2D" uid="uid://bj1atrgt8nnft" path="res://assets/ressources/up.png" id="4_71pxj"]
+[ext_resource type="Texture2D" uid="uid://cx5qrhrjognpv" path="res://assets/ressources/load.png" id="4_cbwpf"]
+[ext_resource type="Texture2D" uid="uid://wn08tm6gkn5b" path="res://assets/ressources/comments.png" id="4_ygidd"]
+[ext_resource type="Texture2D" uid="uid://ciqbtmxc3ep4a" path="res://assets/ressources/up_hover.png" id="5_fd3qr"]
+[ext_resource type="Texture2D" uid="uid://bvh41wv1a6p7d" path="res://assets/ressources/comment_hover.png" id="5_ss1o7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuf85"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eyrlm"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfslp"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_froiy"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmh03"]
+bg_color = Color(0.0705882, 0.32549, 0.996078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x283q"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_ixjt2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4n7h8"]
+resource_name = "default"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7e0qp"]
+_data = {
+"RESET": SubResource("Animation_ixjt2"),
+"default": SubResource("Animation_4n7h8")
+}
+
+[node name="public_project_item" type="Control"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+focus_mode = 1
+script = ExtResource("1_146bo")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+offset_top = -1.0
+offset_right = 4352.0
+color = Color(0.184314, 0.196078, 0.215686, 1)
+
+[node name="container" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="key" type="Label" parent="container"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="container"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.470588, 0.470588, 0.498039, 1)
+theme_override_fonts/font = ExtResource("2_sghjn")
+
+[node name="project_plat" type="TextureRect" parent="container"]
+visible = false
+custom_minimum_size = Vector2(40, 15)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_wnrl2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="project_name" type="Label" parent="container"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.894118, 0.894118, 0.898039, 1)
+theme_override_fonts/font = ExtResource("2_sghjn")
+text = "Test"
+vertical_alignment = 1
+clip_text = true
+
+[node name="project_bpm" type="Label" parent="container"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.509804, 0.509804, 0.541176, 1)
+theme_override_fonts/font = ExtResource("2_sghjn")
+text = "500"
+vertical_alignment = 1
+
+[node name="username" type="Label" parent="container"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.894118, 0.894118, 0.898039, 1)
+theme_override_fonts/font = ExtResource("2_sghjn")
+text = "créateur"
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="project_version" type="Label" parent="container"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.509804, 0.509804, 0.541176, 1)
+theme_override_fonts/font = ExtResource("2_sghjn")
+text = "10.10.10.110"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="btn" type="HBoxContainer" parent="container"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="upvote" type="HBoxContainer" parent="container/btn"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="container/btn/upvote"]
+layout_mode = 2
+text = "0"
+vertical_alignment = 1
+
+[node name="upvote_btn" type="TextureButton" parent="container/btn/upvote"]
+custom_minimum_size = Vector2(15, 50)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+tooltip_text = "Upvote"
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_71pxj")
+texture_hover = ExtResource("5_fd3qr")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="download_btn" type="Button" parent="container/btn"]
+custom_minimum_size = Vector2(128, 35)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_sghjn")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxFlat_tuf85")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_eyrlm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dfslp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_froiy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cmh03")
+text = "download_btn"
+
+[node name="commentary" type="TextureButton" parent="container/btn"]
+custom_minimum_size = Vector2(20, 15)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_ygidd")
+texture_hover = ExtResource("5_ss1o7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="loading" type="Panel" parent="container/btn"]
+visible = false
+custom_minimum_size = Vector2(272, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_x283q")
+
+[node name="icon" type="TextureRect" parent="container/btn/loading"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(16, 16)
+texture = ExtResource("4_cbwpf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="container/btn/loading"]
+libraries = {
+"": SubResource("AnimationLibrary_7e0qp")
+}
+autoplay = "default"
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="gui_input" from="ColorRect2" to="." method="_on_gui_input"]
+[connection signal="gui_input" from="container" to="." method="_on_container_gui_input"]
+[connection signal="gui_input" from="container/username" to="." method="_on_username_gui_input"]
+[connection signal="pressed" from="container/btn/commentary" to="." method="_on_commentary_pressed"]

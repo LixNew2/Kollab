@@ -1,0 +1,115 @@
+[gd_scene load_steps=8 format=3 uid="uid://casd46wvtccdw"]
+
+[ext_resource type="Script" path="res://scripts/projects/member_item.gd" id="1_js1yh"]
+[ext_resource type="FontFile" uid="uid://digpvcpm40o5d" path="res://assets/themes/fonts/Inter-Medium.ttf" id="2_ckkga"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmh03"]
+bg_color = Color(0.00392157, 0.137255, 0.564706, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfslp"]
+bg_color = Color(0.00392157, 0.101961, 0.45098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_froiy"]
+bg_color = Color(0.6, 0.00784314, 0.00784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eyrlm"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuf85"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="project" type="Control"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = -956.0
+offset_bottom = 64.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+script = ExtResource("1_js1yh")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+color = Color(0.188235, 0.196078, 0.211765, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+offset_top = -1.0
+offset_right = 1011.0
+color = Color(0.184314, 0.196078, 0.215686, 1)
+
+[node name="container" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="username" type="Label" parent="container"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.894118, 0.894118, 0.898039, 1)
+theme_override_fonts/font = ExtResource("2_ckkga")
+text = "LixNew"
+vertical_alignment = 1
+clip_text = true
+
+[node name="user_id" type="Label" parent="container"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.894118, 0.894118, 0.898039, 1)
+theme_override_fonts/font = ExtResource("2_ckkga")
+text = "
+"
+vertical_alignment = 1
+clip_text = true
+
+[node name="btn" type="HBoxContainer" parent="container"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="delete" type="Button" parent="container/btn"]
+custom_minimum_size = Vector2(128, 30)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_ckkga")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_cmh03")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dfslp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_froiy")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_eyrlm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tuf85")
+text = "delete_member"
+
+[connection signal="pressed" from="container/btn/delete" to="." method="_on_delete_pressed"]

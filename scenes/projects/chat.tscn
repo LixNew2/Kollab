@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcavh2sngrcvm"]
+
+[ext_resource type="Script" path="res://scripts/settings.gd" id="1_7uvmc"]
+
+[node name="chat" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+script = ExtResource("1_7uvmc")
+
+[node name="settings_box" type="ColorRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[node name="settings_container" type="VBoxContainer" parent="settings_box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 21.0
+offset_right = -32.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="settings_box/settings_container"]
+layout_mode = 2
+text = "Coming soon"
+horizontal_alignment = 1

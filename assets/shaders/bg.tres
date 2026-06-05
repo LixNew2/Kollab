@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://dt46n13y4no0r"]
+
+[ext_resource type="Shader" path="res://assets/shaders/bg.gdshader" id="1_p47c5"]
+
+[sub_resource type="Gradient" id="Gradient_8846v"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.48, 0.987261)
+colors = PackedColorArray(0.694118, 0.0352941, 0.788235, 1, 0.0313726, 0.360784, 0.780392, 1, 0.694118, 0.0352941, 0.788235, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wsnkk"]
+gradient = SubResource("Gradient_8846v")
+width = 512
+
+[resource]
+shader = ExtResource("1_p47c5")
+shader_parameter/move = Vector2(0.2, 0)
+shader_parameter/tex = SubResource("GradientTexture2D_wsnkk")

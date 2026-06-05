@@ -1,0 +1,618 @@
+[gd_scene load_steps=18 format=3 uid="uid://b8rlkg5g8xynd"]
+
+[ext_resource type="Script" path="res://scripts/projects/user_profile.gd" id="1_555ud"]
+[ext_resource type="FontFile" uid="uid://xhmnq725gcl5" path="res://assets/themes/fonts/Sohne-Fett.otf" id="1_d0rv5"]
+[ext_resource type="FontFile" uid="uid://digpvcpm40o5d" path="res://assets/themes/fonts/Inter-Medium.ttf" id="3_2f7xy"]
+[ext_resource type="Texture2D" uid="uid://cx5qrhrjognpv" path="res://assets/ressources/load.png" id="4_wcx3p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24iq8"]
+bg_color = Color(0.0705882, 0.32549, 0.996078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_as307"]
+bg_color = Color(0.00392157, 0.2, 0.992157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_au8g7"]
+bg_color = Color(0.0705882, 0.32549, 0.996078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ja0bp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fp1qu"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.184314, 0.196078, 0.215686, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b03hp"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.509804, 0.72549, 1, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3v88i"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.184314, 0.196078, 0.215686, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w42sn"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.509804, 0.72549, 1, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qk5hm"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.184314, 0.196078, 0.215686, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sy0jt"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+draw_center = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_ixjt2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4n7h8"]
+resource_name = "default"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7e0qp"]
+_data = {
+"RESET": SubResource("Animation_ixjt2"),
+"default": SubResource("Animation_4n7h8")
+}
+
+[node name="user_profile" type="VBoxContainer"]
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_555ud")
+
+[node name="settings_box" type="ColorRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.0705882, 0.0705882, 0.0784314, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="settings_box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = -34.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="settings_box/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="profil_box" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="profil" type="HBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="icon" type="TextureRect" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/profil"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/profil"]
+layout_mode = 2
+text = "Username"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back_btn" type="Button" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/profil"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_2f7xy")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_24iq8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_as307")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_au8g7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ja0bp")
+text = "back_btn"
+alignment = 0
+
+[node name="description_user" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_d0rv5")
+theme_override_font_sizes/font_size = 20
+text = "user_desc"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box"]
+layout_mode = 2
+
+[node name="description_user2" type="LineEdit" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fp1qu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_b03hp")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_fp1qu")
+placeholder_text = "user_desc_placeholder"
+max_length = 199
+editable = false
+context_menu_enabled = false
+caret_blink_interval = 10.0
+
+[node name="links_title" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_d0rv5")
+theme_override_font_sizes/font_size = 20
+text = "user_links"
+
+[node name="links" type="HBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="left" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="Instagram" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left"]
+layout_mode = 2
+
+[node name="Instagram" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/Instagram"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Instagram"
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/Instagram"]
+custom_minimum_size = Vector2(62, 0)
+layout_mode = 2
+
+[node name="Instagram_URL" type="LineEdit" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/Instagram"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3v88i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_w42sn")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_qk5hm")
+placeholder_text = "Instagram"
+alignment = 1
+editable = false
+context_menu_enabled = false
+caret_blink_interval = 10.0
+
+[node name="Spotify" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left"]
+layout_mode = 2
+
+[node name="Spotify" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/Spotify"]
+layout_mode = 2
+text = "Spotify"
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/Spotify"]
+custom_minimum_size = Vector2(87, 0)
+layout_mode = 2
+
+[node name="Spotify_URL" type="LineEdit" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/Spotify"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3v88i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_w42sn")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_qk5hm")
+placeholder_text = "Spotify"
+alignment = 1
+editable = false
+context_menu_enabled = false
+caret_blink_interval = 10.0
+
+[node name="SoundCloud" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left"]
+layout_mode = 2
+
+[node name="SoundCloud" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/SoundCloud"]
+layout_mode = 2
+text = "SoundCloud"
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/SoundCloud"]
+custom_minimum_size = Vector2(47, 0)
+layout_mode = 2
+
+[node name="SoundCloud_URL" type="LineEdit" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/SoundCloud"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3v88i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_w42sn")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_qk5hm")
+placeholder_text = "SoundCloud"
+alignment = 1
+editable = false
+context_menu_enabled = false
+caret_blink_interval = 10.0
+
+[node name="X" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left"]
+layout_mode = 2
+
+[node name="X" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/X"]
+layout_mode = 2
+text = "X"
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/X"]
+custom_minimum_size = Vector2(131, 0)
+layout_mode = 2
+
+[node name="X_URL" type="LineEdit" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/X"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3v88i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_w42sn")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_qk5hm")
+placeholder_text = "X"
+alignment = 1
+editable = false
+context_menu_enabled = false
+caret_blink_interval = 10.0
+
+[node name="right" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="Youtube" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right"]
+layout_direction = 2
+layout_mode = 2
+
+[node name="Youtube" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Youtube"]
+layout_mode = 2
+text = "Youtube"
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Youtube"]
+custom_minimum_size = Vector2(62, 0)
+layout_mode = 2
+
+[node name="Youtube_URL" type="LineEdit" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Youtube"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3v88i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_w42sn")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_qk5hm")
+placeholder_text = "Youtube"
+alignment = 1
+editable = false
+context_menu_enabled = false
+caret_blink_interval = 10.0
+
+[node name="Discord" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right"]
+layout_mode = 2
+
+[node name="Discord" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Discord"]
+layout_mode = 2
+text = "Discord"
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Discord"]
+custom_minimum_size = Vector2(69, 0)
+layout_mode = 2
+
+[node name="Discord_URL" type="LineEdit" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Discord"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3v88i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_w42sn")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_qk5hm")
+placeholder_text = "Discord"
+alignment = 1
+editable = false
+context_menu_enabled = false
+caret_blink_interval = 10.0
+
+[node name="Tiktok" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right"]
+layout_mode = 2
+
+[node name="Tiktok" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Tiktok"]
+layout_mode = 2
+text = "Tiktok"
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Tiktok"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="Tiktok_URL" type="LineEdit" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Tiktok"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3v88i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_w42sn")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_qk5hm")
+placeholder_text = "Tiktok"
+alignment = 1
+editable = false
+context_menu_enabled = false
+caret_blink_interval = 10.0
+
+[node name="Twitch" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right"]
+layout_mode = 2
+
+[node name="Twitch" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Twitch"]
+layout_mode = 2
+text = "Twitch"
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Twitch"]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+
+[node name="Twitch_URL" type="LineEdit" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Twitch"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.537255, 0.552941, 0.568627, 1)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.733333, 0.839216, 0.984314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3v88i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_w42sn")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_qk5hm")
+placeholder_text = "Twitch"
+alignment = 1
+editable = false
+context_menu_enabled = false
+caret_blink_interval = 10.0
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="confirm_btn_container" type="HBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="confirm_settings" type="Button" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer3/confirm_btn_container"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_2f7xy")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_24iq8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_as307")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_au8g7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ja0bp")
+text = "save_profile"
+alignment = 0
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="projects" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="public_projects" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer2/projects"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_d0rv5")
+theme_override_font_sizes/font_size = 20
+text = "public_project"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer2/projects"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="loading" type="Panel" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer2/projects"]
+visible = false
+custom_minimum_size = Vector2(272, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_sy0jt")
+
+[node name="icon" type="TextureRect" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer2/projects/loading"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(16, 16)
+texture = ExtResource("4_wcx3p")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer2/projects/loading"]
+libraries = {
+"": SubResource("AnimationLibrary_7e0qp")
+}
+autoplay = "default"
+
+[node name="not_public_projects" type="Label" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer2/projects"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.537255, 0.552941, 0.568627, 1)
+text = "not_public_projects"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="settings_box/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/profil/back_btn" to="." method="back_btn"]
+[connection signal="gui_input" from="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/Instagram/Instagram_URL" to="." method="_on_url_gui_input" binds= ["insta"]]
+[connection signal="gui_input" from="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/Spotify/Spotify_URL" to="." method="_on_url_gui_input" binds= ["spotify"]]
+[connection signal="gui_input" from="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/SoundCloud/SoundCloud_URL" to="." method="_on_url_gui_input" binds= ["sound"]]
+[connection signal="gui_input" from="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/left/X/X_URL" to="." method="_on_url_gui_input" binds= ["x"]]
+[connection signal="gui_input" from="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Youtube/Youtube_URL" to="." method="_on_url_gui_input" binds= ["yt"]]
+[connection signal="gui_input" from="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Discord/Discord_URL" to="." method="_on_url_gui_input" binds= ["discord"]]
+[connection signal="gui_input" from="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Tiktok/Tiktok_URL" to="." method="_on_url_gui_input" binds= ["tiktok"]]
+[connection signal="gui_input" from="settings_box/ScrollContainer/VBoxContainer/HBoxContainer/profil_box/links/right/Twitch/Twitch_URL" to="." method="_on_url_gui_input" binds= ["twitch"]]

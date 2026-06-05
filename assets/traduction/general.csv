@@ -1,0 +1,256 @@
+,fr,en
+home_btn,     Accueil,     Home
+settings_btn,     Paramètres,     Settings
+copy,Copier,Copy
+home_label,Accueil,Home
+my_project_btn,Mes projets,My projects
+create_btn,Créer,Create
+join_btn,Rejoindre,Join
+choose_plat,Sélectionnez l'extension de votre projet :,Select your project extension :
+title_project,Titre du projet :,Project title :
+add_desc,Ajoutez une description (*facultatif) :,Add a description (*optional) :
+choose_f_p,Déposez le dossier contenant le projet :,Upload the project folder :
+sharing_key_label,Clé de partage :,Sharing key :
+copy_label,Copié !,Copied !
+create_project,   Créer   ,   Create   
+drag_and_drop,Glisser-déposer,Drag and drop
+plat_error,Aucune plateforme sélectionnée,No platform selected
+title_error,Titre manquant,Missing title
+path_error,Dossier du projet manquant,Missing project file
+user_sharing_key_label,Clé de partage :,Sharing key :
+exemple_user_key,exemple : AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAA,example : AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAA
+confirm_key,   Confirmer   ,   Confirm   
+title_project_join,Titre du projet :,Project title :
+desc_project_join,Description du projet : ,Project description :
+plat_project_join,Plateforme du projet,Project platform :
+join_project,   Rejoindre   ,   Join   
+settings_label,Paramètres,Settings
+general_btn,Général,General
+daw_label,EXT,EXT
+project_title_label,Titre,Ttile
+project_desc_label,Description,Description
+bpm_label,BPM (*facultatif) :,BPM (*optional) :
+logout_btn,Se déconnecter,Logout
+save,Dossier de sauvegarde,Backup folder :
+save-path,Chemin d'accès :,Access path :
+exe_path,Exécutables :,Executables :
+fl_path,FL Studio :,FL Studio :
+als_path,Ableton Live :,Ableton Live :
+logic_pro_path,Logic Pro :,Logic Pro :
+cubase_path,Steinberg Cubase :,Steinberg Cubase :
+reaper_path,REAPER :,REAPER :
+studio_path,Studio One :,Studio One :
+confirm_settings,   Confirmer   ,   Confirm   
+WEAK_PASSWORD : Password should be at least 6 characters,Le mot de passe doit comporter au moins 6 caractères, Password should be at least 6 characters
+INVALID_EMAIL,Email invailde,Invalid email
+EMAIL_EXISTS,L'email existe déjà,Email already exists
+username_placeholder_lineedit,Nom d'utilisateur,Username
+email_placeholder_lineedit,Email,Email
+password_placeholder_lineedit,Mot de passe,Password
+confirm_password_placeholder_lineedit,Confirmer le mot de passe,Confirm password
+confirm_login_register_btn,Confirmer,Confirm
+login_subtitle,Se connecter à un compte,Sign in to an account
+register_subtitle,Créer un compte,Create an account
+sign_up_btn,S'inscrire,Sign up
+login_btn,Se connecter ,Login
+not_account,Vous n'avez pas de compte ?,Don't have an account ?
+have_account,Vous avez déjà un compte ?,Already have an account ?
+activation_key_label,Vous n'avez pas de clé d'activation ?,Don’t have an activation key ?
+purchase_key,Acheter,Purchase
+key_placeholder_lineedit,Clé d'activation,Activation key
+key_error,La clé d'activation n'existe pas ou est manquante,The activation key does not exist or is missing
+username_error,Nom d'utilisateur manquant,Username missing
+email_error,Email manquant,Missing email
+password_error_same_missing,Les mots de passe sont manquants ou ne sont pas identiques,Passwords are missing or not identical
+password_placeholder_lineedit_register,Mot de passe (6 caractères min),Password (6 characters min)
+login_error,Mauvais email ou mot de passe ,Wrong email or password 
+version_error,Version manquante,Missing version
+version_label,Version du DAW (*facultatif) :,DAW version (*optional) :
+version_label2,Version du DAW :,DAW version :
+pj_owner_label,Créateur,Creator
+project_owner_label,Niveau,Level
+stay_connected,Rester connecté,Stay connected
+owner,Créateur,Creator
+member,Membre,Member
+fetch,   Actualiser   ,   Refresh   
+push,   Envoyer   ,   Push   
+update,   Mettre à jour   ,   Update   
+delete_project,   Supprimer le projet   ,   Delete project    
+error_key,Cette clé n'existe pas,This key does not exist
+leave_project,   Quitter le projet   ,   Exit project   
+open_btn,   Ouvrir   ,   Open   
+close_btn,   Fermer   ,   Close   
+popup_delete_label,Voulez vous supprimer le projet ?,Do you want to delete the project ?
+popup_delete_btn,"   Oui, supprimer   ","   Yes, delete   "
+popup_close_btn,   Fermer   ,   Close   
+Path:,Chemin:,
+Create Folder,Créer un dossier,
+Directories & Files:,Dossiers & Fichiers:,
+Select Current Folder,Sélectionner le dossier actuel,
+Cancel,Annuler,
+File:,Fichier:,
+All Files (*),Tous les fichiers (*),
+Open,Ouvrir,
+Refresh files.,Actualiser les fichiers.,
+Toggle the visibility of hidden files.,Permet d'activer ou de désactiver la visibilité des fichiers cachés.,
+Go to parent folder.,Aller dans le dossier parent.,
+Go to next folder.,Passer au dossier suivant.,
+Go to previous folder.,Aller au dossier précédent.,
+key_placehorlder,exemple : AAAA-AAAA-AAAA-AAAA-AAAA,example : AAAA-AAAA-AAAA-AAAA-AAAA
+account_activation_label,Activation du compte,Account activation 
+buy_key_btn,Acheter,Buy
+"not_key",Pas de clé ?,No key ?
+confirm_login_register_btn,Confirmer,Confirm
+error_key,Clé invlide / inéxistante ou manquante !,Invlide key/ not existing or missing !
+nbr_project_remaining,Projets restants : ,Remaining projects :
+nbr_project,Projets : ,Projects :
+popup_full_project_label,Nombre de projets maximaux atteints !,Maximum number of projects reached !
+message_full_project,Supprimer des projets ou acheter une clé supérieure,Delete projects or buy a higher key
+popup_buy_key_btn,   Acheter   ,   Buy   
+label_key,Clé : ,Key :
+new_activation_key,Nouvelle clé d'activation :,New activation key :
+exemple_new_activation_key,exemple : AAAA-AAAA-AAAA-AAAA-AAAA,example : AAAA-AAAA-AAAA-AAAA-AAAA
+not_yet,Pas maintenant,Back
+popup_update_version,Vous êtes passé en :,You've switched to :
+settings_project,   Paramètres   ,   Settings   
+settings_project_label,Paramètres du projet,Project settings
+popup_edit_project_btn,   Modifier le projet   ,   Edit project   
+popup_member_project_btn,   Membre(s) du projet   ,   Project member(s)   
+title_project_edit,Titre : ,Title : 
+desc_project_edit,Description: ,Description :
+version_project_edit,Version du DAW :,DAW version :
+popup_confirm_btn,   Confirmer   ,   Confirm   
+edit_project_title,Modification du projet,Project modification
+members_title,Membre(s) du projet,Project member(s)
+delete_member,   Supprimer   ,   Delete   
+popup_member_delete_label,Voulez-vous supprimer ce membre du projet ?,Do you want to remove this member from the project ?
+join_error,Vous possédez déjà ce projet,You already own this project
+max_users_label,Nombre de membres maximum (*facultatif) :,Maximum number of members (*optional) :
+user_max_project_label,Membres maximum atteint,Maximum members reached
+message_full_user_project,Ce projet a atteint son nombre de membres maximum,This project has reached its maximum number of members
+wbesite_btn,Visiter le site web ↗,Visite website ↗
+kollab_licence_btn,Kollab ,Kollab
+third_party_licenses_btn,Tierces,Third-party
+kollab_license_label,Licences,Licenses
+third_party_licenses_label,Licences tierces,Third-party licenses
+licence_label,Licences :,Licenses :
+terms_condition_use_label,Conditions d'Utilisation,Conditions of Use
+error_condition_of_use,Vous devez accepter les conditions d'utilisation,You must accept the terms of use
+accept_conditions_use,J'ai lu et j'accepte,I have read and accept
+terms_condition_use_label_change,Veuillez accepter les nouvelles conditions d'utilisation.,Please accept the new terms of use.
+ok_btn,OK,OK
+version_label_1,Version du DAW,DAW version
+bpm_label_1,BPM,BPM
+path_dir_error,Seuls les répertoires sont acceptés,Only directories are accepted
+exe_popup_error,Veuillez configurer le chemin d'accès des exécutables,Please set the path for executables
+set_exe,   Configurer les exe   ,   Configuring exe   
+exe_error,Seuls les fichiers .exe sont acceptés,Only .exe files are accepted
+plat_to_sameplat_btn,   Plateforme à platforme   ,   Platform to platform   
+plat_to_otherplat_btn,   Platforme à autre platforme   ,   Platform to other platform   
+back_btn,   Retour   ,   Back   
+choose_f_p_o,Déposer le dossier contenant les stems du projet :,Drag and drop the project stems folder :
+only_mac_os_ext,Disponible uniquement sur MacOS,Available only on MacOS
+get_update,Vérifier les mise à jours  ↓,Check for updates  ↓
+project_date,Modifié,Modified
+file_not_found,Dossier introuvable,Folder not found
+files_not_found,Fichier introuvable,File not found
+thanks_label,Merci de votre soutien !,Thank you for your support!
+title_filedialog_flp,Sélectionnez le .flp du projet,Select the project .flp
+title_filedialog_als,Sélectionnez le .als du projet,Select the project .als
+title_filedialog_logic,Sélectionnez le .logic du projet,Select the project .logic
+title_filedialog_cpr,Sélectionnez le .cpr du projet,Select the project .cpr
+title_filedialog_rpp,Sélectionnez le .rpp du projet,Select the project .rpp
+title_filedialog_song,Sélectionnez le .song du projet,Select the project .song
+file_not_found2,Fichier introuvable ,File not found 
+idea_bug,Bug / Idée,Bug / Idea
+project_dl_finished,L'installation de vos projets s'est terminée correctement,Your projects have been installed successfully
+project_dl_popup,"Vos projets sont en cours d'installation, veuillez patienter","Your projects are being installed, so please be patient"
+click_to_copy,Cliquez pour copier,Click to copy
+copie_tooltip,Copié !,Copied !
+ago_text,il y a {time},{time} ago
+date_year,an,y
+date_month,m,m
+date_day,j,d
+date_hour,h,h
+date_minute,min,min
+date_second,sec,sec
+update_avalible,Mise à jour disponible,Update available
+update_desc,"Les mises à jour sont fortement recommandées afin d'éviter des dysfonctionnements majeurs de l'application. Veuillez les effectuer dès que vous en avez la possibilité (IMPORTANT).
+
+Procédure de mise à jour :
+1 - Cliquez sur le bouton ""Télécharger"".
+2 - Téléchargez la dernière version sur le site web.
+3 - Désinstallez Kollab de votre machine.
+4 - Réinstallez Kollab sur votre machine.
+
+Si vous rencontrez des problèmes concernant quoi que ce soit, envoyez un email au support à contact@kollabsound.com ou sur le serveur Discord : https://discord.gg/85ekjJMCgT","Updates are strongly recommended to avoid major application malfunctions. Please update as soon as you can (IMPORTANT).
+
+Update procedure :
+1 - Click on the ""Download"" button.
+2 - Download the latest version from the website.
+3 - Uninstall Kollab from your machine.
+4 - Reinstall Kollab on your machine.
+
+If you have any problems with any aspect of Kollab, please email support at contact@kollabsound.com or on the Discord server: https://discord.gg/85ekjJMCgT"
+join_error2,Le répertoire choisi doit être vide,The selected directory must be empty
+update_popup_btn,   Mettre à jour   ,   Update   
+project_not_found,Projet introuvable,Project not found
+reconfig_btn,   Configurer   ,   Set up   
+config_label,Veuillez configurer le nouveau chemin d'accès du projet,Please set the new project path
+free_trial_btn,Essai gratuit de 14j,14-day free trial
+free_trial,Temps restant {time},Remaining {time}
+popup_free_trial_label,Commencez votre période d'essai ?,Start your trial period ?
+free_trial_btn_popup,   Commencer   ,   Start   
+free_trial_ended_popup_label,Fin de votre période d'essai,End of your trial period
+message_free_trial,Votre période d'essai est finie. Veuillez acheter une clé d'activation.,Your trial period is over. Please purchase an activation key
+reset_password_email_send,Email envoyé !,Email sent !
+reset_password_btn,Réinitialiser,Reset
+password_forgot_label,Mot de passe oublié ?,Forgot your password ?
+link_machine_popup_error_label,Ce compte appartient à un autre appareil,This account belongs to another device
+link_machine_error_message,Ce compte a été activé sur l'appareil nommé {hostname},This account has been activated on the device named {hostname}
+link_machine_popup_label,Activation du compte,Account activation
+link_machine_message,"Si vous validez, ce compte sera associé à cet appareil et ne pourra plus être changé !","If you confirm, this account will be associated with this device and cannot be changed!"
+link_btn,   Confirmer   ,   Confirm   
+contact_support,"Pour tout changement ou erreur, veuillez contacter le","For any changes or errors, please contact"
+account_activation_time_error_popup_label,Clé d'activation expirée,Activation key expired
+account_activation_time_error_popup_message,"Votre clé d'activation est arrivée à expiration, veuillez souscrire à une nouvelle clé !","Your activation key has expired, please sign up for a new one !"
+key_expiration,Votre clé expire dans,Your key expires in
+ext_project_edit,Modifier l'extension,Edit extension
+size_file_error,Vous pouvez créer un projet de {size}Mo maximum !,You can create a project of up to {size}MB !
+size_file_error_gb,Vous pouvez créer un projet de {size}Go maximum !,You can create a project of up to {size}GB !
+language_label,Langue :,Language :
+public_projects_btn,     Projets public,     Public projects
+public_projects_label,Projets public,Public projects
+download_btn,Télécharger,   Download   
+project_creator_label,Créateur,Creator
+popup_public_project_label,Projects public erreur,Public projects error
+message_public_project,"La création et l'accessibilité aux projets publics ne sont possibles qu'avec une clé ""Premium""","Public projects can only be created and accessed with a ""Premium"" key."
+popup_upgrade_key_btn,   Améliorer la clé   ,   Improve key   
+commentary_title,Commentaires,Comments
+your_comment_here,Ton projet est trop cool ^^ !,Your project is so cool ^^!
+send_comment_btn,   Publier   ,   Publish   
+comment_error,Vous ne pouvez pas publier un commentaire vide !,You can't publish an empty comment !
+delete_comment_btn,Supprimer,Delete
+popup_delete_comment_label,Voulez-vous supprimer ce commentaire ?,Would you like to delete this comment ?
+popup_delete_btn,"   Oui, supprimer   ","   Yes, delete   "
+not_projects,"Trop vide, trop vide...","Too empty, too empty..."
+not_comments,C'est trop calme...,It's too quiet...
+not_public_projects,Aucun projet à l'horizon !,No project on the horizon !
+history_title,Historique des mises à jour,Update history
+message_full_project_premium,Nombre de projets maximaux atteints !,Maximum number of projects reached !
+size_file_error_push,Le projet peut avoir une taille de maximum {size} Mo !,The maximum project size is {size}MB !
+size_file_error_push_gb,Le projet peut avoir une taille de maximum {size} Go !,The maximum project size is {size}GB !
+user_desc,A propos de moi,About me
+user_links,Liens utiles,Useful links
+public_project,Projets publics,Public projects
+user_desc_placeholder,Ici tu peux parler de toi ^^,Here you can talk about yourself ^^
+social_btn,     Social,     Social
+my_profile_btn,Mon profil,My profile
+chat_btn,Chat,Chat
+my_friends_btn,Mes amis,My friends
+add_firends_btn,Ajouter des amis,Add friends
+social_title,Social,Social
+save_profile,   Sauvegarder   ,   Save   
+username_check_error,Ce nom d'utilisateur est déjà utilisé !,This username is already in use !
+open_link_popup_title,AVERTISSEMENT,WARNING
+open_link_popup_subtitle,Ce lien peut être dangereux. Voulez-vous continuer ?,This link may be dangerous. Would you like to continue?
